@@ -8,9 +8,17 @@ function App() {
   const [todos, setTodos] = useState([]);
   // State variable for new todos
   const [newTodo, setNewTodo] = useState("");
+  // Stops the default form submission to reload the page
+  // Update both state variables accordingly
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
+    setNewTodo("");
+  };
   return (
     <div>
-      <form>
+      {/* Add onSubmit to form to make sure handleSubmit is called */}
+      <form onSubmit={handleSubmit}>
         {/* Updates the state varliable newTodo each time the user types and a new task */}
         <input type="text"
           value={newTodo}
