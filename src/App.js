@@ -14,23 +14,23 @@ function App() {
     event.preventDefault();
     setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
     setNewTodo("");
-    // Add functionality to mark todo items as completed
-    // Add a checkbox to each list item - updating the completed property in the object once the checkbox is checked
-    const handleToggleCompleted = (id) => {
-      setTodos(
-        todos.map((todo) => {
-          if (todo.id === id) {
-            return { ...todo, completed: !todo.completed };
-          } else {
-            return todo;
-          }
-        })
-      );
-      // Add functionality to delete list items
-      const handleDeleteTodo = (id) => {
-        setTodos(todos.filter((todo) => todo.id !== id));
-      };
-    };
+  };
+  // Add functionality to mark todo items as completed
+  // Add a checkbox to each list item - updating the completed property in the object once the checkbox is checked
+  const handleToggleCompleted = (id) => {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todo, completed: !todo.completed };
+        } else {
+          return todo;
+        }
+      })
+    );
+  };
+  // Add functionality to delete list items
+  const handleDeleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
   return (
     <div>
