@@ -26,6 +26,10 @@ function App() {
           }
         })
       );
+      // Add functionality to delete list items
+      const handleDeleteTodo = (id) => {
+        setTodos(todos.filter((todo) => todo.id !== id));
+      };
     };
   };
   return (
@@ -57,6 +61,8 @@ function App() {
             <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
               {todo.text}
             </span>
+            {/* Renders a delete button w/each list item that renders */}
+            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
       </ul>
