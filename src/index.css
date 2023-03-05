@@ -12,11 +12,13 @@ code {
     monospace;
 }
 
+
 body {
   height: 100vh;
   background-color: black;
 }
 
+/* Wraps full todo list content */
 .container {
   width: 50%;
   background-color: white;
@@ -24,15 +26,30 @@ body {
   position: absolute;
 }
 
+/* Input Field Styling */
 .todo-input {
   width: 75%;
   color: #111111;
   position: relative;
 }
 
+/* Input Field Button */
 .add-todo {
   position: relative;
   float: right;
   cursor: pointer;
   width: 20%;
+}
+
+/* Styling for individual todo list item */
+.todo-item {
+  background-color: purple;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  display: flex;
+}
+
+.delete-todo {
+  height: 100%;
+  border-radius: 5px;
 }

@@ -49,7 +49,7 @@ function App() {
       {/* Add a checkbox to each list item - updating the completed property in the object once the checkbox is checked */}
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>
+          <li key={todo.id} className="todo-item">
             {/* Checkbox to represent completed state of item */}
             <input
               type="checkbox"
@@ -63,7 +63,7 @@ function App() {
               {todo.text}
             </span>
             {/* Renders a delete button w/each list item that renders */}
-            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+            <button className="delete-todo" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
       </ul>
