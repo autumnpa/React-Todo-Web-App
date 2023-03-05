@@ -33,7 +33,7 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
   return (
-    <div>
+    <div className="container">
       {/* Add onSubmit to form to make sure handleSubmit is called */}
       <form onSubmit={handleSubmit}>
         {/* Updates the state varliable newTodo each time the user types and a new task */}
