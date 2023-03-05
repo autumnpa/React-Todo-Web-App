@@ -14,6 +14,19 @@ function App() {
     event.preventDefault();
     setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
     setNewTodo("");
+    // Add functionality to mark todo items as completed
+    // Add a checkbox to each list item - updating the completed property in the object once the checkbox is checked
+    const handleToggleCompleted = (id) => {
+      setTodos(
+        todos.map((todo) => {
+          if (todo.id === id) {
+            return { ...todo, completed: !todo.completed };
+          } else {
+            return todo;
+          }
+        })
+      );
+    };
   };
   return (
     <div>
@@ -26,11 +39,24 @@ function App() {
         />
         <button type="submit">Add Todo</button>
       </form>
-      {/* Render the todo list items */}
+      {/* Render the todo list items using map - items stored in todos state variable */}
+      {/* Add functionality to mark todo items as completed */}
+      {/* Add a checkbox to each list item - updating the completed property in the object once the checkbox is checked */}
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
-            {todo.text}
+            {/* Checkbox to represent completed state of item */}
+            <input
+              type="checkbox"
+              // Checked attribute of checkbox is set to completed 
+              checked={todo.completed}
+              // When checkbox is clicked it trigegrs the event handler to show completed item from state
+              onChange={() => handleToggleCompleted(todo.id)}
+            />
+            {/* Styling for completed items */}
+            <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+              {todo.text}
+            </span>
           </li>
         ))}
       </ul>
