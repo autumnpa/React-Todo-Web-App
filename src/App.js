@@ -38,10 +38,11 @@ function App() {
       <form onSubmit={handleSubmit}>
         {/* Updates the state varliable newTodo each time the user types and a new task */}
         <input type="text"
+        className="todo-input"
           value={newTodo}
           onChange={(event) => setNewTodo(event.target.value)}
         />
-        <button type="submit">Add Todo</button>
+        <button className="add-todo" type="submit">Add Todo</button>
       </form>
       {/* Render the todo list items using map - items stored in todos state variable */}
       {/* Add functionality to mark todo items as completed */}

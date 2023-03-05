@@ -23,3 +23,16 @@ body {
   min-width: 350px;
   position: absolute;
 }
+
+.todo-input {
+  width: 75%;
+  color: #111111;
+  position: relative;
+}
+
+.add-todo {
+  position: relative;
+  float: right;
+  cursor: pointer;
+  width: 20%;
+}
