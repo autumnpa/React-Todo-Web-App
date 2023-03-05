@@ -26,6 +26,14 @@ function App() {
         />
         <button type="submit">Add Todo</button>
       </form>
+      {/* Render the todo list items */}
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id}>
+            {todo.text}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
