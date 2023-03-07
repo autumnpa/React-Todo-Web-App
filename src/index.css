@@ -12,19 +12,9 @@ code {
     monospace;
 }
 
-
-body {
-  height: 100vh;
-  background-color: grey;
-}
-
 /* Wraps full todo list content */
 
 .container {
-  /* position: absolute;
-  border-radius: 10px;
-  background-color: white;
-  padding: 0.5em 1em; */
   width: 400px;
   max-width: 100%;
   margin: 20px auto 40px;
