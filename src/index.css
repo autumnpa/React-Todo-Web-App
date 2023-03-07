@@ -15,41 +15,52 @@ code {
 
 body {
   height: 100vh;
-  background-color: black;
+  background-color: grey;
 }
 
 /* Wraps full todo list content */
+
 .container {
-  width: 50%;
+  /* position: absolute;
+  border-radius: 10px;
   background-color: white;
-  min-width: 350px;
-  position: absolute;
+  padding: 0.5em 1em; */
+  width: 400px;
+  max-width: 100%;
+  margin: 20px auto 40px;
+  padding: 40px 20px;
+  background-color: #f4f7fc;
+}
+
+input[type='text'] {
+  border: 1px solid #ddd;
 }
 
 /* Input Field Styling */
 .todo-input {
   width: 75%;
-  color: #111111;
-  position: relative;
 }
 
 /* Input Field Button */
 .add-todo {
-  position: relative;
   float: right;
-  cursor: pointer;
   width: 20%;
 }
 
-/* Styling for individual todo list item */
-.todo-item {
-  background-color: purple;
-  margin-bottom: 8px;
-  padding: 5px 10px;
-  display: flex;
+.todo {
+  display: block;
+  padding: 1em 1em 1em 16%;
+  border-bottom: solid 1px #ddd;
+}
+
+.todo-list {
+  background: #FFF; 
+  font-size: 20px;
+  margin: auto;
+  padding: 0.5em 1em;
 }
 
 .delete-todo {
   height: 100%;
-  border-radius: 5px;
+  float: right;
 }

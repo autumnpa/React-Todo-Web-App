@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="container">
       {/* Add onSubmit to form to make sure handleSubmit is called */}
-      <form onSubmit={handleSubmit}>
+      <form className=""onSubmit={handleSubmit}>
         {/* Updates the state varliable newTodo each time the user types and a new task */}
         <input type="text"
         className="todo-input"
@@ -47,9 +47,9 @@ function App() {
       {/* Render the todo list items using map - items stored in todos state variable */}
       {/* Add functionality to mark todo items as completed */}
       {/* Add a checkbox to each list item - updating the completed property in the object once the checkbox is checked */}
-      <ul>
+      <ul className="todo-list">
         {todos.map((todo) => (
-          <li key={todo.id} className="todo-item">
+          <li key={todo.id} className="todo">
             {/* Checkbox to represent completed state of item */}
             <input
               type="checkbox"
