@@ -34,6 +34,15 @@ function App() {
   const handleDeleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
+
+  // Refactor your code to use useEffect to log all the current To Dos whenever they are updated.
+  //   useEffect(() => {
+  //    argument here - update something;
+  //   }, second argument here - dependancies);
+  // Update current state of tasks everytime a new one is added (console.log)
+  // Use dependancy array - tasks will change so the effect needs to be re-run when values update
+
+
   return (
     <div className="container">
       {/* Add onSubmit to form to make sure handleSubmit is called */}
