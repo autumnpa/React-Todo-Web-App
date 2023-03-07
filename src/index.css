@@ -22,13 +22,13 @@ code {
   background-color: #f4f7fc;
 }
 
-input[type='text'] {
-  border: 1px solid #ddd;
-}
-
 /* Input Field Styling */
 .todo-input {
   width: 75%;
+}
+
+input[type='text'] {
+  border: 1px solid #ddd;
 }
 
 /* Input Field Button */
@@ -37,17 +37,23 @@ input[type='text'] {
   width: 20%;
 }
 
-.todo {
-  display: block;
-  padding: 1em 1em 1em 16%;
-  border-bottom: solid 1px #ddd;
-}
-
+/* Todo List */
 .todo-list {
   background: #FFF; 
   font-size: 20px;
   margin: auto;
   padding: 0.5em 1em;
+}
+
+/* Individual Task */
+.todo {
+  display: block;
+  padding: 1em 1em 1em 1em;
+  border-bottom: solid 1px #ddd;
+}
+
+.todo-text {
+  padding-left: 1em;
 }
 
 .delete-todo {

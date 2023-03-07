@@ -59,7 +59,7 @@ function App() {
               onChange={() => handleToggleCompleted(todo.id)}
             />
             {/* Styling for completed items */}
-            <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+            <span className="todo-text" style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
               {todo.text}
             </span>
             {/* Renders a delete button w/each list item that renders */}
