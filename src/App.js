@@ -1,7 +1,9 @@
 // Blank app with basic form to add tasks
 // Import useState - to hold onto list of tasks
+// (Optional Challenge): Refactor your code to use useEffect to log all the current To Dos whenever they are updated.
+// (Optional Challenge): Refactor your code to have an external Todo component in its own file Todo.js.
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
   // State variable for todos list
@@ -35,10 +37,10 @@ function App() {
   return (
     <div className="container">
       {/* Add onSubmit to form to make sure handleSubmit is called */}
-      <form className=""onSubmit={handleSubmit}>
+      <form className="" onSubmit={handleSubmit}>
         {/* Updates the state varliable newTodo each time the user types and a new task */}
         <input type="text"
-        className="todo-input"
+          className="todo-input"
           value={newTodo}
           onChange={(event) => setNewTodo(event.target.value)}
         />
