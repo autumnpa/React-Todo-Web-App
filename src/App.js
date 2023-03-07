@@ -41,6 +41,11 @@ function App() {
   //   }, second argument here - dependancies);
   // Update current state of tasks everytime a new one is added (console.log)
   // Use dependancy array - tasks will change so the effect needs to be re-run when values update
+  // My array is todos so that is what needs to be in the useEffect to updates each value when added
+
+  useEffect(() => {
+    console.log([todos])
+  }, [todos]);
 
 
   return (
