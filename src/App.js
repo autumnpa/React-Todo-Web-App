@@ -44,7 +44,7 @@ function App() {
   // My array is todos so that is what needs to be in the useEffect to updates each value when added
 
   useEffect(() => {
-    console.log([todos])
+    console.log(todos)
   }, [todos]);
 
 
