@@ -1,6 +1,7 @@
 {
   "name": "todo-app",
   "version": "0.1.0",
+  "homepage": "https://autumnpa.github.io/React-Todo-Web-App/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
